@@ -29,7 +29,7 @@ const HomePage = () => {
           fontSize="3xl"
           ml={3}
         >
-          Podcasts
+          abhay smells bad
         </Text>
         <Spacer />
         <HStack spacing={0} mr={3}>
