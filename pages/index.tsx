@@ -12,7 +12,6 @@ import {
   Icon,
 } from "@chakra-ui/react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-
 //local imports
 import GenreHeader from "../components/GenreHeader";
 import MusicCatalog from "../components/MusicCatalog";
