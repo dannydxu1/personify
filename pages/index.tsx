@@ -12,24 +12,30 @@ import {
   Icon,
 } from "@chakra-ui/react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-//local imports
-import GenreHeader from "../components/GenreHeader";
-import MusicCatalog from "../components/MusicCatalog";
-import ShortcutIconFooter from "../components/ShortcutIconFooter";
-import UserIconHeader from "../components/UserIconHeader";
+
+import ArtistCard from "../components/ArtistCard";
 
 const HomePage = () => {
   return (
-    <Box w="100vw" h="100vh" rounded="40px" bg="gray">
-      <Flex pt="20vh">
+    <Box
+      w="100vw"
+      h="100vh"
+      rounded="40px"
+      position="relative"
+      bgGradient={[
+        "linear(to-t, green.300, black)",
+        "linear(to-b, orange.100, purple.300)",
+      ]}
+    >
+      <Flex pt="20vh" zIndex={1}>
         <Text
-          color="black"
+          color="white"
           fontFamily="inter"
-          fontWeight="medium"
-          fontSize="3xl"
+          fontWeight="bold"
+          fontSize="5xl"
           ml={3}
         >
-          abhay smells bad
+          Podcasts
         </Text>
         <Spacer />
         <HStack spacing={0} mr={3}>
@@ -41,6 +47,7 @@ const HomePage = () => {
           </Center>
         </HStack>
       </Flex>
+      <ArtistCard />
     </Box>
   );
 };
