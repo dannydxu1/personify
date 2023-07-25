@@ -23,7 +23,7 @@ const ArtistCard = () => {
     <Center py={6}>
       <Box
         w="xs"
-        rounded={"sm"}
+        rounded={20}
         my={5}
         mx={[0, 5]}
         overflow={"hidden"}
