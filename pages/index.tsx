@@ -9,6 +9,7 @@ import {
   HStack,
   VStack,
   Button,
+  Image,
   Icon,
 } from "@chakra-ui/react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
@@ -17,34 +18,39 @@ import ArtistCard from "../components/ArtistCard";
 
 const HomePage = () => {
   return (
-    <Box
-      w="100vw"
-      h="100vh"
-      rounded="40px"
-      position="relative"
-      bgGradient={[
-        "linear(to-t, green.300, black)",
-        "linear(to-b, orange.100, purple.300)",
-      ]}
-    >
-      <Flex pt="20vh" zIndex={1}>
+    <Box w="100vw" h="100vh" position="relative">
+      <Flex pt="1vh" zIndex={1} justifyContent="center">
+        {/*Username*/}
         <Text
-          color="white"
           fontFamily="inter"
           fontWeight="bold"
-          fontSize="5xl"
+          fontSize="2xl"
           ml={3}
+          bgClip="text"
+          bgGradient="linear(to-br, #1DB954, #383838)"
+          textShadow="3px 3px 6px rgba(0, 0, 0, 0.2)"
         >
-          Podcasts
+          danny
         </Text>
         <Spacer />
-        <HStack spacing={0} mr={3}>
-          <Center w="30px" h="30px" bg="dark_gray" borderRadius="80%">
-            <Icon as={FaChevronLeft} color="white" boxSize="1em" />
-          </Center>
-          <Center w="30px" h="30px" bg="dark_gray" borderRadius="80%">
-            <Icon as={FaChevronRight} color="white" boxSize="1em" />
-          </Center>
+        {/*Profile Picture*/}
+        <HStack>
+          <Box
+            w="25px"
+            h="25px"
+            rounded="full"
+            overflow="hidden"
+            mr={3}
+            boxShadow="3px 3px 6px rgba(0, 0, 0, 0.2)"
+          >
+            <Image
+              src="/danny_pfp.png"
+              alt="User Avatar"
+              objectFit="cover"
+              w="full"
+              h="full"
+            />
+          </Box>
         </HStack>
       </Flex>
       <ArtistCard />
