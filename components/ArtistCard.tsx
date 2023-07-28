@@ -9,7 +9,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 
-const ArtistCard = () => {
+const ArtistCard = ({artist, artistPicture, width, height, genre}) => {
   return (
     <Box
       my={3}
@@ -21,7 +21,8 @@ const ArtistCard = () => {
       boxShadow={useColorModeValue("6px 6px 0 black", "6px 6px 0 cyan")}
       borderRadius="md"
       maxW="sm"
-      w="120px"
+      w={width}
+      height={height}
     >
       <HStack  borderBottom="1px" borderColor="black">
         <Box
@@ -33,7 +34,7 @@ const ArtistCard = () => {
           boxShadow="3px 3px 6px rgba(0, 0, 0, 0.2)"
         >
           <Img
-            src="/drake_bbl.jpg"
+            src={artistPicture}
             roundedTop="sm"
             objectFit="cover"
             w="50"
@@ -42,7 +43,7 @@ const ArtistCard = () => {
           />
         </Box>
         <Heading color="black" fontSize="lg" noOfLines={1}>
-          Drake
+          {artist}
         </Heading>
       </HStack>
       <Box p={3}>
@@ -55,7 +56,7 @@ const ArtistCard = () => {
           mb={2}
         >
           <Text fontSize="xs" fontWeight="medium">
-            Hip-Hop/Rap
+            {genre}
           </Text>
         </Box>
       </Box>

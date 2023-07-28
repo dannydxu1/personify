@@ -53,7 +53,7 @@ const HomePage = () => {
           </Box>
         </HStack>
       </Flex>
-      <ArtistCard />
+      <ArtistCard artist={"Drake"} artistPicture={"/drake_bbl.jpg"} width={"120px"} height={"90px"} genre={"Hip-Hop/Rap"}/>
     </Box>
   );
 };
